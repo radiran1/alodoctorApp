@@ -1,4 +1,4 @@
-angular.module('alodoctorApp', ['ionic'])
+angular.module('alodoctorApp', ['ngCordova', 'ionic'])
 
   .run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
@@ -10,7 +10,7 @@ angular.module('alodoctorApp', ['ionic'])
     }
   });
 })
-.config(function($stateProvider,$urlRouterProvider){
+  .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('app', {
     url: "/app",
@@ -32,6 +32,15 @@ angular.module('alodoctorApp', ['ionic'])
         templateUrl: "app/templates/note.html"
       }
     }
-  });
+  })
+    .state('app.demo', {
+    url: "/demo",
+    views: {
+      'menuContent': {
+        templateUrl: "app/templates/demo.html"
+      }
+    }
+  })
+  ;
   $urlRouterProvider.otherwise('/app/notes');
 })
