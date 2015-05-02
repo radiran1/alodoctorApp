@@ -3,8 +3,12 @@
 	angular.module('alodoctorApp').controller('NotesCtrl', ['alodoctorApi', NotesCtrl]);
 	function NotesCtrl(alodoctorApi) {
 		var notes = this;
-		var response = alodoctorApi.getNotes();
-		/*console.log(response);*/
-		notes.Notes = response.Notes;
+		alodoctorApi.getNotes(function (data) {
+			notes.Notes = data.Notes;
+		});
+		
+		/*		var response = alodoctorApi.getNotes();
+				e.log(response);
+				Notes = response.Notes;*/
 	}
 })();
