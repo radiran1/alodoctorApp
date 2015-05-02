@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Elham';
+    src: url('../font/Elham.eot');
+    src: url('../font/Elham.eot?#iefix') format('embedded-opentype'),
+         url('../font/Elham.woff') format('woff'), url('../font/Elham.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ElhamForDigit';
+    src: url('../font/ElhamForDigit.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ElhamForEn';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/ElhamForEn.eot');
+    src: url('../font/ElhamForEn.eot?#iefix') format('embedded-opentype'),
+         url('../font/ElhamForEn.woff') format('woff'),
+         url('../font/ElhamForEn.ttf') format('truetype'),
+         url('../font/ElhamForEn.svg#robotoblack') format('svg');
+}
+
+body {
+    font-family: 'Elham' ,sans-serif;
+    font-size: 16px;
+}
+
+.has-footer.has-tabs { bottom: 93px; }
+
+.sub-footer { bottom: 50px !important; }

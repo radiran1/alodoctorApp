@@ -1,0 +1,12 @@
+<ion-view view-title="اخبار و مطالب" ng-controller="NotesCtrl as data">
+	<ion-content>
+		<div class="list">
+			<div ng-repeat="note in data.Notes">
+				<a href="#/app/notes/{{note.Id}}" class="item item-icon-right">
+			{{note.Name}}
+			<i class="icon ion-chevron-right icon-accessory"></i>
+		</a>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
