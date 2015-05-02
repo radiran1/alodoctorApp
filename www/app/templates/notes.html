@@ -1,18 +1,19 @@
-<ion-view  view-title="اخبار و مطالب" ng-controller="NotesCtrl as data">
+<ion-view  view-title="اخبار و مطالب" ng-controller="NotesCtrl as notes">
 	<ion-content>
-		<div class="list" style="direction:rtl;">
-			<div ng-repeat="note in data.Notes">
-				<a href="#/app/notes/{{note.Id}}" class="item item-icon-left">
-					<div class="row">
+		<div class="list" style="direction:rtl;font-size:11px;">
+			<div ng-repeat="note in notes.Notes">
+				<a href="#/app/notes/{{note.Id}}" class="item item-thumbnail-right">
+					 <img ng-src="{{note.Image}}">
+<!--					<div class="row">
 						<div class="col-20">
 					    <img ng-src="{{note.Image}}" width="60" height="60">
 						</div>
 						<div class="col">
 							    <h2>{{note.Name}}</h2>
 						</div>
-					</div>
-					<div class="row"><p>{{note.Description}}</p></div>
-			<i class="icon ion-chevron-left icon-accessory"></i>
+					</div>-->
+					<h2 class="positive" style="height: 20px;">{{note.Name}}</h2><br/>
+					<h3 style="height: 20px;">{{note.Description}}</h3>
 		</a>
 			</div>
 		</div>
