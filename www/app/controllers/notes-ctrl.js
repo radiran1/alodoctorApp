@@ -3,7 +3,7 @@
 	angular.module('alodoctorApp').controller('NotesCtrl', ['alodoctorApi', NotesCtrl]);
 	function NotesCtrl(alodoctorApi) {
 		var notes = this;
-		alodoctorApi.getNotes(function (data) {
+		alodoctorApi.getNotes().then(function (data) {
 			notes.Notes = data.Notes;
 		});
 		

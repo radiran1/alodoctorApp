@@ -3,7 +3,7 @@
   angular.module('alodoctorApp').controller('NoteCtrl', ['$stateParams', 'alodoctorApi', NoteCtrl]);
   function NoteCtrl($stateParams, alodoctorApi) {
     var note = this;
-    alodoctorApi.getNotes(function (data) {
+    alodoctorApi.getNotes().then(function (data) {
       note.Id = Number($stateParams.Id);
       var model = _.chain(data.Notes)
         .find({ "Id": note.Id })
