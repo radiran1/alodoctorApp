@@ -40,7 +40,6 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
         templateUrl: "app/templates/demo.html"
       }
     }
-  })
-  ;
+  });
   $urlRouterProvider.otherwise('/app/notes');
 })
