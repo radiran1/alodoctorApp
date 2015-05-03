@@ -18,7 +18,7 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
     templateUrl: "app/templates/menu.html"
   })
     .state('app.notes', {
-    url: "/notes",
+    url: "/notes/:clinicId",
     views: {
       'menuContent': {
         templateUrl: "app/templates/notes.html"
@@ -26,7 +26,7 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
     }
   })
     .state('app.note', {
-    url: "/notes/:Id",
+    url: "/note/:Id",
     views: {
       'menuContent': {
         templateUrl: "app/templates/note.html"
@@ -41,5 +41,5 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   });
-  $urlRouterProvider.otherwise('/app/notes');
+  $urlRouterProvider.otherwise('/app/demo');
 })

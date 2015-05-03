@@ -10,13 +10,5 @@
         .value();
       note.Name = model.Name;
     });
-    
-    /*      note.Id = Number($stateParams.Id);
-  var notes = alodoctorApi.getNotes();
- 
-  var data = _.chain(notes.Notes)
-    .find({ "Id": note.Id })
-    .value();
-  note.Name = data.Name;*/
   }
 })();

@@ -1,14 +1,11 @@
 (function () {
 	'use strict';
-	angular.module('alodoctorApp').controller('NotesCtrl', ['alodoctorApi', NotesCtrl]);
-	function NotesCtrl(alodoctorApi) {
+	angular.module('alodoctorApp').controller('NotesCtrl', ['$stateParams', 'alodoctorApi', NotesCtrl]);
+	function NotesCtrl($stateParams, alodoctorApi) {
 		var notes = this;
-		alodoctorApi.getNotes().then(function (data) {
+		var clinicId = Number($stateParams.clinicId);
+		alodoctorApi.getClinicNotes(clinicId).then(function (data) {
 			notes.Notes = data.Notes;
 		});
-		
-		/*		var response = alodoctorApi.getNotes();
-				e.log(response);
-				Notes = response.Notes;*/
 	}
 })();
