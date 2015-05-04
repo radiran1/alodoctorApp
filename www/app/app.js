@@ -17,6 +17,10 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
     abstract: true,
     templateUrl: "app/templates/menu.html"
   })
+    .state('home', {
+    url: "/home",
+    templateUrl: "app/templates/home.html"
+  })
     .state('app.notes', {
     url: "/notes/:clinicId",
     views: {
@@ -41,5 +45,5 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   });
-  $urlRouterProvider.otherwise('/app/demo');
+  $urlRouterProvider.otherwise('/home');
 })
