@@ -2,7 +2,7 @@
 	'use strict';
 	angular.module('alodoctorApp').factory('alodoctorApi', ['$http', '$q', '$ionicLoading', '$timeout', alodoctorApi]);
 	function alodoctorApi($http, $q, $ionicLoading, $timeout) {
-		var request = JSON.parse('{"apprequest":{"ApiKey":"WIG3BmFbjWBmwDZPE5E7b2bP6L6mGTsXArdiOegc4eU=","DeviceId":"9774d56d682e549c", "RequestDateTime":"2015-01-01"},"ClinicId":"2","Take":"40","Skip":"0","Term":"‌","SortType":"desc"}');
+		var request = JSON.parse('{"apprequest":{"ApiKey":"WIG3BmFbjWBmwDZPE5E7b2bP6L6mGTsXArdiOegc4eU=","DeviceId":"9774d56d682e549c", "RequestDateTime":"2015-01-01"},"ClinicId":"2","Take":"60","Skip":"0","Term":"‌","SortType":"desc"}');
 
 		var currentNoteId;
 		function getNotes() {

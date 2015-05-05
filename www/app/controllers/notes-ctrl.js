@@ -6,6 +6,7 @@
 		var clinicId = Number($stateParams.clinicId);
 		alodoctorApi.getClinicNotes(clinicId).then(function (data) {
 			notes.Notes = data.Notes;
+			console.log("Notes : " +data.TotalItems);
 		});
 	}
 })();
