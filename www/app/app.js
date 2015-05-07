@@ -12,6 +12,11 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
 })
   .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
+  
+  .state('intro', {
+    url: '/',
+    templateUrl: 'app/templates/intro.html'
+  })
     .state('app', {
     url: "/app",
     abstract: true,
@@ -78,5 +83,5 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   });
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
 })

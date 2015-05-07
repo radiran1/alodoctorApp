@@ -29,6 +29,11 @@ h1,h2,h3,h4,h5,h6{height: 20px;}
 a{
  text-decoration: none; 
 }
+
+a > img{
+    width:100%;
+    height: 100%;
+}
 .list{
     direction:rtl;
     font-size:11px;
@@ -37,33 +42,33 @@ a{
 .item h2,h2,h3,h4,h5,h6{height: 20px;}
 
 .col.footer-notes{
-    font: 10px 'Elham';
+    font: 12px 'Elham';
     text-align: center;
-    height: 40px;
+    height: 50px;
     margin: auto;
     cursor: auto;
     background-color: #2F88AA;
 }
 .col.footer-questions{
-    font: 10px 'Elham';
+    font: 12px 'Elham';
     text-align: center;
-    height: 40px;
+    height: 50px;
     margin: auto;
     cursor: auto;
     background-color: #C7B39B;
 }
 .col.footer-doctors{
-    font: 10px 'Elham';
+    font: 12px 'Elham';
     text-align: center;
-    height: 40px;
+    height: 50px;
     margin: auto;
     cursor: auto;
     background-color: #7DCFFF;
 }
 .col.footer-popularnotes{
-    font: 10px 'Elham';
+    font: 12px 'Elham';
     text-align: center;
-    height: 40px;
+    height: 50px;
     margin: auto;
     cursor: auto;
     background-color: #467394;
@@ -84,9 +89,28 @@ a{
 }
 .bar-subfooter{
     padding: 0;
+    text-align: center;
+    height: 50px;
+    margin: auto;
+    cursor: auto;
 }
 
 .col > a {
-  color: white;
+    margin: auto;
+    cursor: auto;
+    text-align: center;
+    color: white;
+}
+
+/*-------------------------- Intro Style*/
+.slider {
+  height: 100%;
+}
+.slider-slide > img{
+    width:100%;
+}
+.slider-slide {
+  padding-top: 80px;
+  background-color: #fff;
   text-align: center;
 }
