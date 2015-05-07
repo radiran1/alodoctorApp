@@ -1,0 +1,35 @@
+<ion-view view-title="سوالات" ng-controller="QuestionsCtrl as questions">
+  <ion-content>
+    <div class="list">
+      <div ng-repeat="question in questions.Questions">
+        <div class="item">
+          <h2>
+            <a href="http://www.alodoctor.ir/mobile/question/{{question.Id}}" class="positive">
+                  {{question.SearchTitle}}
+                </a>
+          </h2>
+          <br>
+          <h3>
+            <a href="#/app/demo" style="color:red;">{{question.Doctor.FullName}} : </a>{{question.Title}}</h3>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+    <div class="bar bar-subfooter row">
+    <div class="col footer-notes">
+      <a href="#/app/notes/{{questions.ClinicId}}">اخبار و مطالب</a>
+    </div>
+    <div class="col footer-questions">
+      <a href="#/app/questions/{{questions.ClinicId}}">سوالات</a>
+    </div>
+    <div class="col footer-doctors">
+      <a href="#/app/doctors/{{questions.ClinicId}}">پزشکان</a>
+    </div>
+    <div class="col footer-popularnotes">
+      <a href="#/app/popularnotes/{{questions.ClinicId}}">پر بینندهای امروز</a>
+    </div>
+  </div>
+  <div class="bar bar-footer auto-height">
+    <a href="#/app/demo" class="footer-newsletter">مجله رایگان ما را از دست ندهید</a>
+  </div>
+</ion-view>

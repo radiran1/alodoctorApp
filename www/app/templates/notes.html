@@ -1,13 +1,30 @@
-<ion-view  view-title="اخبار و مطالب" ng-controller="NotesCtrl as notes">
-	<ion-content>
-		<div class="list" style="direction:rtl;font-size:11px;">
-			<div ng-repeat="note in notes.Notes">
-				<a href="#/app/note/{{note.Id}}" class="item item-thumbnail-right">
+<ion-view view-title="اخبار و مطالب" ng-controller="NotesCtrl as notes">
+  <ion-content>
+<div class="list">
+      <div ng-repeat="note in notes.Notes">
+        <a href="#/app/note/{{note.Id}}" class="item item-thumbnail-right">
 					 <img ng-src="{{note.Image}}">
 					<h2 class="positive" style="height: 20px;">{{note.Name}}</h2><br/>
 					<h3 style="height: 20px;">{{note.Description}}</h3>
 		</a>
-			</div>
-		</div>
-	</ion-content>
+      </div>
+    </div>
+  </ion-content>
+  <div class="bar bar-subfooter row">
+    <div class="col footer-notes">
+      <a href="#/app/notes/{{notes.ClinicId}}">اخبار و مطالب</a>
+    </div>
+    <div class="col footer-questions">
+      <a href="#/app/questions/{{notes.ClinicId}}">سوالات</a>
+    </div>
+    <div class="col footer-doctors">
+      <a href="#/app/doctors/{{notes.ClinicId}}">پزشکان</a>
+    </div>
+    <div class="col footer-popularnotes">
+      <a href="#/app/popularnotes/{{notes.ClinicId}}">پر بینندهای امروز</a>
+    </div>
+  </div>
+  <div class="bar bar-footer auto-height">
+    <a href="#/app/demo" class="footer-newsletter">مجله رایگان ما را از دست ندهید</a>
+  </div>
 </ion-view>

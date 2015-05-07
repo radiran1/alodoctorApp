@@ -25,7 +25,68 @@ body {
     font-family: 'Elham' ,sans-serif;
     font-size: 16px;
 }
+h1,h2,h3,h4,h5,h6{height: 20px;}
+a{
+ text-decoration: none; 
+}
+.list{
+    direction:rtl;
+    font-size:11px;
+}
 
-.has-footer.has-tabs { bottom: 93px; }
+.item h2,h2,h3,h4,h5,h6{height: 20px;}
 
-.sub-footer { bottom: 50px !important; }
+.col.footer-notes{
+    font: 10px 'Elham';
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    cursor: auto;
+    background-color: #2F88AA;
+}
+.col.footer-questions{
+    font: 10px 'Elham';
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    cursor: auto;
+    background-color: #C7B39B;
+}
+.col.footer-doctors{
+    font: 10px 'Elham';
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    cursor: auto;
+    background-color: #7DCFFF;
+}
+.col.footer-popularnotes{
+    font: 10px 'Elham';
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    cursor: auto;
+    background-color: #467394;
+}
+
+.footer-newsletter{
+    font: 18px 'Elham';
+    margin: auto;
+    cursor: auto;
+    text-align: center;
+    color: white;
+}
+
+.bar-footer{
+    margin: auto;
+    cursor: auto;
+    background-color: #2A4860; 
+}
+.bar-subfooter{
+    padding: 0;
+}
+
+.col > a {
+  color: white;
+  text-align: center;
+}

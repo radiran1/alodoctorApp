@@ -1,0 +1,24 @@
+<ion-view view-title="پزشکان" ng-controller="DoctorCtrl as doc">
+  <ion-content>
+{{doc.FullName}}
+  </ion-content>
+  <div class="bar bar-subfooter row">
+    <div class="col text-center">
+      <a href="#/app/notes/{{doctors.ClinicId}}" class="footer-text">اخبار و مطالب</a>
+    </div>
+    <div class="col text-center">
+      <a href="#/app/questions/{{doctors.ClinicId}}" class="footer-text">سوالات</a>
+    </div>
+    <div class="col text-center">
+      <a href="#/app/doctors/{{doctors.ClinicId}}" class="footer-text">پزشکان</a>
+    </div>
+    <div class="col text-center">
+      <a href="#/app/popularnotes/{{doctors.ClinicId}}" class="footer-text">پر بیننده ترین های امروز</a>
+    </div>
+  </div>
+  <div class="bar bar-footer bar-balanced auto-height">
+    <div class="row text-center">
+      <a href="#/app/demo" class="footer-text">مجله رایگان ما را از دست ندهید</a>
+    </div>
+  </div>
+</ion-view>

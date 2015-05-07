@@ -29,11 +29,44 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   })
+    .state('app.questions', {
+    url: "/questions/:clinicId",
+    views: {
+      'menuContent': {
+        templateUrl: "app/templates/questions.html"
+      }
+    }
+  })
+    .state('app.doctors', {
+    url: "/doctors/:clinicId",
+    views: {
+      'menuContent': {
+        templateUrl: "app/templates/doctors.html"
+      }
+    }
+  })
+    .state('app.popularnotes', {
+    url: "/popularnotes/:clinicId",
+    views: {
+      'menuContent': {
+        templateUrl: "app/templates/popularnotes.html"
+      }
+    }
+  })
     .state('app.note', {
     url: "/note/:Id",
     views: {
       'menuContent': {
         templateUrl: "app/templates/note.html"
+      }
+    }
+  })
+
+    .state('app.doctor', {
+    url: "/doctor/:Id",
+    views: {
+      'menuContent': {
+        templateUrl: "app/templates/doctor.html"
       }
     }
   })
