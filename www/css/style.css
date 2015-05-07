@@ -26,8 +26,9 @@ body {
     font-size: 16px;
 }
 h1,h2,h3,h4,h5,h6{height: 20px;}
+
 a{
- text-decoration: none; 
+ text-decoration: none;
 }
 
 a > img{
@@ -85,7 +86,7 @@ a > img{
 .bar-footer{
     margin: auto;
     cursor: auto;
-    background-color: #2A4860; 
+    background-color: #2A4860;
 }
 .bar-subfooter{
     padding: 0;
@@ -110,7 +111,7 @@ a > img{
     width:100%;
 }
 .slider-slide {
-  padding-top: 80px;
+  /*padding-top: 80px;*/
   background-color: #fff;
   text-align: center;
 }
