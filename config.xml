@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.alodoctorapp747059" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>alodoctorApp</name>
   <description>
-        An Ionic Framework and Cordova project.
+      This is My First Project With ionic an Angualr
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+    <author email="radiran1@hotmail.com" href="http://ionicframework.com/">
+      Reza Rad
     </author>
   <content src="index.html"/>
   <access origin="*"/>
