@@ -1,12 +1,12 @@
 <ion-view view-title="اخبار و مطالب" ng-controller="NotesCtrl as notes">
   <ion-content>
-<div class="list">
+    <div class="list">
       <div ng-repeat="note in notes.Notes">
         <a href="#/app/note/{{note.Id}}" class="item item-thumbnail-right">
-					 <img ng-src="{{note.Image}}">
-					<h2 class="positive" style="height: 20px;">{{note.Name}}</h2><br/>
-					<h3 style="height: 20px;">{{note.Description}}</h3>
-		</a>
+          <img ng-src="{{note.Image}}">
+          <h2 class="positive" style="height: 20px;">{{note.Name}}</h2><br/>
+          <h3 style="height: 20px;">{{note.Description}}</h3>
+        </a>
       </div>
     </div>
   </ion-content>

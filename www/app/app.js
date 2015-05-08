@@ -1,6 +1,6 @@
 angular.module('alodoctorApp', ['ngCordova', 'ionic'])
 
-  .run(function ($ionicPlatform) {
+.run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -10,23 +10,23 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
     }
   });
 })
-  .config(function ($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
-  
+
   .state('intro', {
     url: '/',
     templateUrl: 'app/templates/intro.html'
   })
-    .state('app', {
+  .state('app', {
     url: "/app",
     abstract: true,
     templateUrl: "app/templates/menu.html"
   })
-    .state('home', {
+  .state('home', {
     url: "/home",
     templateUrl: "app/templates/home.html"
   })
-    .state('app.notes', {
+  .state('app.notes', {
     url: "/notes/:clinicId",
     views: {
       'menuContent': {
@@ -34,7 +34,7 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   })
-    .state('app.questions', {
+  .state('app.questions', {
     url: "/questions/:clinicId",
     views: {
       'menuContent': {
@@ -42,7 +42,7 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   })
-    .state('app.doctors', {
+  .state('app.doctors', {
     url: "/doctors/:clinicId",
     views: {
       'menuContent': {
@@ -50,7 +50,7 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   })
-    .state('app.popularnotes', {
+  .state('app.popularnotes', {
     url: "/popularnotes/:clinicId",
     views: {
       'menuContent': {
@@ -58,7 +58,7 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   })
-    .state('app.note', {
+  .state('app.note', {
     url: "/note/:Id",
     views: {
       'menuContent': {
@@ -66,8 +66,8 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   })
-
-    .state('app.doctor', {
+  
+  .state('app.doctor', {
     url: "/doctor/:Id",
     views: {
       'menuContent': {
@@ -75,7 +75,7 @@ angular.module('alodoctorApp', ['ngCordova', 'ionic'])
       }
     }
   })
-    .state('app.demo', {
+  .state('app.demo', {
     url: "/demo",
     views: {
       'menuContent': {
