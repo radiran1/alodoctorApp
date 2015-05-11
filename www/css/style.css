@@ -42,36 +42,24 @@ a > img{
 
 .item h2,h2,h3,h4,h5,h6{height: 20px;}
 
-.col.footer-notes{
-  font: 12px 'Elham';
-  text-align: center;
-  height: 50px;
-  margin: auto;
+.footer-notes{
   cursor: auto;
+  color: white;
   background-color: #2F88AA;
 }
-.col.footer-questions{
-  font: 12px 'Elham';
-  text-align: center;
-  height: 50px;
-  margin: auto;
+.footer-questions{
   cursor: auto;
+  color: white;
   background-color: #C7B39B;
 }
-.col.footer-doctors{
-  font: 12px 'Elham';
-  text-align: center;
-  height: 50px;
-  margin: auto;
+.footer-doctors{
   cursor: auto;
+  color: white;
   background-color: #7DCFFF;
 }
-.col.footer-popularnotes{
-  font: 12px 'Elham';
-  text-align: center;
-  height: 50px;
-  margin: auto;
+.footer-popularnotes{
   cursor: auto;
+  color: white;
   background-color: #467394;
 }
 
@@ -96,13 +84,6 @@ a > img{
   cursor: auto;
 }
 
-.col > a {
-  margin: auto;
-  cursor: auto;
-  text-align: center;
-  color: white;
-}
-
 /*-------------------------- Intro Style*/
 
 .slider {
@@ -121,14 +102,38 @@ a > img{
 }
 
 .slider-pager {
-  margin:0px auto 60px;
+  margin:0px auto 45px;
 }
 
 .footer-intro{
   font: 15px 'Elham';
-  height: 450px;
+  height: 45px;
   margin: auto;
   cursor: auto;
   text-align: center;
   color: white;
+}
+/*-------------------------- inAppBrowser*/
+.inAppBrowserWrap {
+  background-color: rgba(0,0,0,0.75);
+  color: rgba(235,235,235,1.0);
+}
+.inAppBrowserWrap menu {
+  overflow: auto;
+  list-style-type: none;
+  padding-left: 0;
+}
+.inAppBrowserWrap menu li {
+  font-size: 25px;
+  height: 25px;
+  float: left;
+  margin: 0 10px;
+  padding: 3px 10px;
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  background: rgba(30,30,30,0.50);
+}
+.inAppBrowserWrap menu li.disabled {
+  color: #777;
 }

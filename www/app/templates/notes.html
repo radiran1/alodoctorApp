@@ -11,17 +11,13 @@
     </div>
   </ion-content>
   <div class="bar bar-subfooter row">
-    <div class="col footer-notes">
-      <a href="#/app/notes/{{notes.ClinicId}}">اخبار و مطالب</a>
-    </div>
-    <div class="col footer-questions">
-      <a href="#/app/questions/{{notes.ClinicId}}">سوالات</a>
-    </div>
-    <div class="col footer-doctors">
-      <a href="#/app/doctors/{{notes.ClinicId}}">پزشکان</a>
-    </div>
-    <div class="col footer-popularnotes">
-      <a href="#/app/popularnotes/{{notes.ClinicId}}">پر بینندهای امروز</a>
+    <div class="tabs-striped">
+      <div class="tabs">
+        <a class="tab-item active footer-notes" href="#/app/notes/{{notes.ClinicId}}">اخبار و مطالب</a>
+        <a class="tab-item footer-questions" href="#/app/questions/{{notes.ClinicId}}">سوالات</a>
+        <a class="tab-item footer-doctors" href="#/app/doctors/{{notes.ClinicId}}">پزشکان</a>
+        <a class="tab-item footer-popularnotes" href="#/app/popularnotes/{{notes.ClinicId}}" style="font-size:12px;">پر بینندهای امروز</a>
+      </div>
     </div>
   </div>
   <div class="bar bar-footer auto-height">

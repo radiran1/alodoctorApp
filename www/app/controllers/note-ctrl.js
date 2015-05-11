@@ -1,14 +1,25 @@
 (function () {
   'use strict';
-  angular.module('alodoctorApp').controller('NoteCtrl', ['$stateParams', 'alodoctorApi', NoteCtrl]);
-  function NoteCtrl($stateParams, alodoctorApi) {
+  angular.module('alodoctorApp').controller('NoteCtrl', ['$stateParams', '$cordovaInAppBrowser', NoteCtrl]);
+  function NoteCtrl($stateParams, $cordovaInAppBrowser, alodoctorApi) {
     var note = this;
-/*    alodoctorApi.getNotes().then(function (data) {
-      note.Id = Number($stateParams.Id);
-      var model = _.chain(data.Notes)
-        .find({ "Id": note.Id })
-        .value();
-      note.Name = model.Name;
-    });*/
+    note.Id = Number($stateParams.Id);
+    var url = 'http://www.alodoctor.ir/mobile/article/' + note.Id;
+    var options = {
+      location: 'yes',
+      clearcache: 'yes',
+      toolbar: 'no'
+    };
+    document.addEventListener(function () {
+      $cordovaInAppBrowser.open(url, '_blank', options)
+        .then(function (event) {
+        console.log(event);
+      })
+        .catch(function (event) {
+        console.log(event);
+      });
+      $cordovaInAppBrowser.close();
+    }, false);
+    /*note.Url = $cordovaInAppBrowser.open(url, '_blank', options);*/
   }
 })();

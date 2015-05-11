@@ -4,7 +4,7 @@
       <div ng-repeat="question in questions.Questions">
         <div class="item">
           <h2>
-            <a href="http://www.alodoctor.ir/mobile/question/{{question.Id}}" class="positive">
+            <a href="#/app/question/{{question.Id}}" class="positive">
                   {{question.SearchTitle}}
                 </a>
           </h2>
@@ -15,18 +15,14 @@
       </div>
     </div>
   </ion-content>
-    <div class="bar bar-subfooter row">
-    <div class="col footer-notes">
-      <a href="#/app/notes/{{questions.ClinicId}}">اخبار و مطالب</a>
-    </div>
-    <div class="col footer-questions">
-      <a href="#/app/questions/{{questions.ClinicId}}">سوالات</a>
-    </div>
-    <div class="col footer-doctors">
-      <a href="#/app/doctors/{{questions.ClinicId}}">پزشکان</a>
-    </div>
-    <div class="col footer-popularnotes">
-      <a href="#/app/popularnotes/{{questions.ClinicId}}">پر بینندهای امروز</a>
+  <div class="bar bar-subfooter row">
+    <div class="tabs-striped">
+      <div class="tabs">
+        <a class="tab-item footer-notes" href="#/app/notes/{{questions.ClinicId}}">اخبار و مطالب</a>
+        <a class="tab-item active footer-questions" href="#/app/questions/{{questions.ClinicId}}">سوالات</a>
+        <a class="tab-item footer-doctors" href="#/app/doctors/{{questions.ClinicId}}">پزشکان</a>
+        <a class="tab-item footer-popularnotes" href="#/app/popularnotes/{{questions.ClinicId}}">پر بینندهای امروز</a>
+      </div>
     </div>
   </div>
   <div class="bar bar-footer auto-height">
