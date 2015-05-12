@@ -1,4 +1,4 @@
-  angular.module('alodoctorApp', ['ngCordova', 'ionic'])
+  angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {

@@ -1,26 +1,30 @@
 <ion-view view-title="اخبار و مطالب" ng-controller="NotesCtrl as notes">
   <ion-content>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
     <div class="list">
       <div ng-repeat="note in notes.Notes">
-        <a href="#/app/note/{{note.Id}}" class="item item-thumbnail-right">
-          <img ng-src="{{note.Image}}">
-          <h2 class="positive" style="height: 20px;">{{note.Name}}</h2><br/>
-          <h3 style="height: 20px;">{{note.Description}}</h3>
-        </a>
+        <a href="#/app/note/{{note.Id}}" class="item item-thumbnail-right item-text-wrap">
+          <img ng-src="{{note.Image}}" alt="{{note.Name}} Photo">
+          <h3 class="positive">{{note.Name | limitTo:30}}
+            {{note.Name.length > 30 ? '&hellip;' : ''}}</h3>
+            <p>{{note.Description | limitTo: 100}}
+              {{ note.Description.length > 150 ? '&hellip;' : '' }}</p>
+            </a>
+          </div>
+        </div>
+      </ion-content>
+
+      <div class="bar bar-subfooter row">
+        <div class="tabs-striped">
+          <div class="tabs">
+            <a class="tab-item active footer-notes" href="#/app/notes/{{notes.ClinicId}}">اخبار و مطالب</a>
+            <a class="tab-item footer-questions" href="#/app/questions/{{notes.ClinicId}}">سوالات</a>
+            <a class="tab-item footer-doctors" href="#/app/doctors/{{notes.ClinicId}}">پزشکان</a>
+            <a class="tab-item footer-popularnotes" href="#/app/popularnotes/{{notes.ClinicId}}">پر بینندهای امروز</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </ion-content>
-  <div class="bar bar-subfooter row">
-    <div class="tabs-striped">
-      <div class="tabs">
-        <a class="tab-item active footer-notes" href="#/app/notes/{{notes.ClinicId}}">اخبار و مطالب</a>
-        <a class="tab-item footer-questions" href="#/app/questions/{{notes.ClinicId}}">سوالات</a>
-        <a class="tab-item footer-doctors" href="#/app/doctors/{{notes.ClinicId}}">پزشکان</a>
-        <a class="tab-item footer-popularnotes" href="#/app/popularnotes/{{notes.ClinicId}}" style="font-size:12px;">پر بینندهای امروز</a>
+      <div class="bar bar-footer auto-height">
+        <a href="#/app/demo" class="footer-newsletter">مجله رایگان ما را از دست ندهید</a>
       </div>
-    </div>
-  </div>
-  <div class="bar bar-footer auto-height">
-    <a href="#/app/demo" class="footer-newsletter">مجله رایگان ما را از دست ندهید</a>
-  </div>
-</ion-view>
+    </ion-view>
