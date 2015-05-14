@@ -1,16 +1,16 @@
 <ion-view view-title="پزشکان" ng-controller="DoctorsCtrl as doctors">
-
-  <ion-content>
-    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+  <ion-content class="padding">
+    <ion-refresher on-refresh="doctors.doRefresh()"></ion-refresher>
     <ion-list>
       <ion-item ng-repeat='doctor in doctors.Doctors' class="item-thumbnail-left item-text-wrap" href="#/app/doctor/{{doctor.Id}}">
         <img ng-src="{{doctor.Avatar}}" alt="{{doctor.FullName}}">
-        <h2 class="positive">{{doctor.FullName}}</h2><br/>
+        <h2 class="positive">{{doctor.FullName}}</h2>
+        <br/>
         <h3>{{doctor.SpecialityName}}</h3>
       </ion-item>
     </ion-list>
+    <ion-infinite-scroll on-infinite="doctors.loadData()" distance="1%"></ion-infinite-scroll>
   </ion-content>
-
   <div class="bar bar-subfooter row">
     <div class="tabs-striped">
       <div class="tabs">

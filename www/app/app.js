@@ -1,6 +1,6 @@
-angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
+angular.module('alodoctorApp', ['ngCordova', 'ngSanitize', 'ionic'])
 
-.run(function ($ionicPlatform) {
+  .run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -10,23 +10,23 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
     }
   });
 })
-.config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  .state('intro', {
+    .state('intro', {
     url: '/',
     templateUrl: 'app/intro/intro.html'
   })
-  .state('app', {
+    .state('app', {
     url: "/app",
     abstract: true,
     templateUrl: "app/layout/menu.html"
   })
-  .state('home', {
+    .state('home', {
     url: "/home",
     templateUrl: "app/home/home.html"
   })
-  .state('app.notes', {
+    .state('app.notes', {
     url: "/notes/:clinicId",
     views: {
       'menuContent': {
@@ -34,7 +34,7 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
       }
     }
   })
-  .state('app.questions', {
+    .state('app.questions', {
     url: "/questions/:clinicId",
     views: {
       'menuContent': {
@@ -42,7 +42,7 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
       }
     }
   })
-  .state('app.doctors', {
+    .state('app.doctors', {
     url: "/doctors/:clinicId",
     views: {
       'menuContent': {
@@ -50,7 +50,7 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
       }
     }
   })
-  .state('app.popularnotes', {
+    .state('app.popularnotes', {
     url: "/popularnotes/:clinicId",
     views: {
       'menuContent': {
@@ -58,7 +58,7 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
       }
     }
   })
-  .state('app.note', {
+    .state('app.note', {
     url: "/note/:Id",
     views: {
       'menuContent': {
@@ -67,7 +67,7 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
     }
   })
 
-  .state('app.doctor', {
+    .state('app.doctor', {
     url: "/doctor/:Id",
     views: {
       'menuContent': {
@@ -75,7 +75,7 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
       }
     }
   })
-  .state('app.question', {
+    .state('app.question', {
     url: "/question/:Id",
     views: {
       'menuContent': {
@@ -83,7 +83,7 @@ angular.module('alodoctorApp', ['ngCordova','ngSanitize', 'ionic'])
       }
     }
   })
-  .state('app.demo', {
+    .state('app.demo', {
     url: "/demo",
     views: {
       'menuContent': {
